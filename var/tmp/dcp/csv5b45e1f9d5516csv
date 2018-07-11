@@ -1,0 +1,20 @@
+BEGIN;;Animal;;;ZOO_ANIMAL
+//;properties
+//propid;value
+ICON;zoo_animal.png
+CLASS;Zoo\Zoo_animal
+DFLDID;FLD_ZOO_ANIMAL
+//;attributes
+//;idattr;idframe;label;T;A;type;ord;vis;need;link;phpfile;phpfunc;elink;option;Commentaires
+ATTR;AN_IDENTIFICATION;;Identification;N;N;frame;::auto;W
+ATTR;AN_NOM;AN_IDENTIFICATION;nom;Y;N;text;::auto;W;Y;;;;;edittemplate=ZOO:ANIMALNAME:U;viewtemplate=ZOO:ANIMALNAME
+ATTR;AN_TATOUAGE;AN_IDENTIFICATION;tatouage;N;N;int;::auto;W;;;;;;edittemplate=ZOO:ANIMALTATOO:S;viewtemplate=ZOO:ANIMALTATOO:S
+ATTR;AN_ESPECE;AN_IDENTIFICATION;espèce;N;N;docid("ZOO_ESPECE");::auto;W;Y;;;;;creation={es_nom:CT};doctitle=an_espece_title
+ATTR;AN_ESPECE_TITLE;AN_IDENTIFICATION;espèce (titre);Y;N;text;::auto;H;;;;::getTitle(an_espece)
+END
+
+
+
+
+
+

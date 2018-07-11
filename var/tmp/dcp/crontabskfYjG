@@ -1,0 +1,198 @@
+
+# BEGIN:CONTROL_CRONTAB:/var/www/wiff:control.cron
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiff:control.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wiff132:control.cron
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiff132:control.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wiffcinq2:control.cron
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiffcinq2:control.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wiff2:control.cron
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiff2:control.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/ctrl151:control.cron
+WIFF_ROOT=/var/www/ctrl151
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/ctrl151:control.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/GEDDEV:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/GEDDEV
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/GEDDEV:FREEDOM/freedom.cron
+
+# BEGIN:CONTROL_CRONTAB:/var/www/wiffRecent:control.cron
+WIFF_ROOT=/var/www/wiffRecent
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiffRecent:control.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/solims:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/solims/
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/solims:FREEDOM/freedom.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/mlims:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/mlims/
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=usercard_refreshgroup > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=freedom_clean --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=fdl_cronexec > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/mlims:FREEDOM/freedom.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/stialims:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/stialims/
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=usercard_refreshgroup > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=freedom_clean --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=fdl_cronexec > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/stialims:FREEDOM/freedom.cron
+
+# BEGIN:FREEDOM_CRONTAB:/var/www/solims:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/solims
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/solims:FREEDOM/freedom.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wiffcinq3:control.cron
+WIFF_ROOT=/var/www/wiffcinq3
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiffcinq3:control.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/g_ul:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/g_ul/
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/g_ul:FREEDOM/freedom.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wiff140:control.cron
+WIFF_ROOT=/var/www/wiff140
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiff140:control.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wiffprime:control.cron
+WIFF_ROOT=/var/www/wiffprime
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiffprime:control.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wifflast:control.cron
+WIFF_ROOT=/var/www/wifflast
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wifflast:control.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/lims2:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/lims2
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/lims2:FREEDOM/freedom.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/lims11:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/lims11/
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=usercard_refreshgroup > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=freedom_clean --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=fdl_cronexec > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/lims11:FREEDOM/freedom.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/amama:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/amama
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/amama:FREEDOM/freedom.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/dynacase:control.cron
+WIFF_ROOT=/var/www/dynacase
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/dynacase:control.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/alaeddine:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/alaeddine
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/alaeddine:FREEDOM/freedom.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/dn:control.cron
+WIFF_ROOT=/var/www/dn
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/dn:control.cron
+
+# BEGIN:FREEDOM_CRONTAB:/var/www/treza:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/treza
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/treza:FREEDOM/freedom.cron
+# BEGIN:FREEDOM_CRONTAB:/var/www/azert:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/azert
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/azert:FREEDOM/freedom.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/dynacase-control:control.cron
+WIFF_ROOT=/var/www/dynacase-control
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/dynacase-control:control.cron
+
+# BEGIN:FREEDOM_CRONTAB:/var/www/wxcv:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/wxcv
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/wxcv:FREEDOM/freedom.cron
+# BEGIN:CONTROL_CRONTAB:/var/www/wiffcinq:control.cron
+WIFF_ROOT=/var/www/wiffcinq
+# Every days
+43 5 * * * [ -f "$WIFF_ROOT"/wiff ] && cd "$WIFF_ROOT" && ./wiff send_configuration > /dev/null
+# END:CONTROL_CRONTAB:/var/www/wiffcinq:control.cron
+
+# BEGIN:FREEDOM_CRONTAB:/var/www/tutorial:FREEDOM/freedom.cron
+CONTEXT_ROOT=/var/www/tutorial
+# Every hours
+01 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=refreshGroups > /dev/null
+# Every days
+02 5 * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=cleanContext --real=yes > /dev/null
+# Every 5 minutes
+*/5 * * * * [ -f "$CONTEXT_ROOT"/wsh.php ] && [ ! -f "$CONTEXT_ROOT"/maintenance.lock ] && cd "$CONTEXT_ROOT" && ./wsh.php --api=processExecute > /dev/null
+# END:FREEDOM_CRONTAB:/var/www/tutorial:FREEDOM/freedom.cron
